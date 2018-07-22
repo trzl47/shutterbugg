@@ -1,0 +1,30 @@
+version: '3'
+services:
+  react-nginx:
+    image: trzl/portfolio:shutterbug-react.1
+    restart: unless-stopped
+    container_name: shutterbug-nginx
+    networks:
+      - shutterbug
+    env_file: .env
+    environment:
+      - NODE_ENV=production
+  reverseproxy:
+    image: trzl/portfolio:shutterbug-proxy.1
+    container_name: shutterbug-proxy
+    restart: unless-stopped
+    expose:
+      - "80"
+      - "443"
+    depends_on:
+      - react-nginx
+   environment:
+      VIRTUAL_HOST: shutterbug.tbrownkcdev.com
+      LETSENCRYPT_HOST: shutterbug.tbrownkcdev.com
+      LETSENCRYPT_EMAIL: brownty47@gmail.com
+networks:
+  default:
+    external:
+      name: webproxy
+  shutterbug:
+    driver: bridge

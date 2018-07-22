@@ -28,7 +28,7 @@
 }
 
 .main {
-	background-image: url('./assets/intro.jpg');
+	background-image: url('../img/intro.jpg');
 	height: 550px;
 	padding-top: 55px;
 }
