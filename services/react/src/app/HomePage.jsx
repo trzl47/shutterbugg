@@ -12,8 +12,8 @@ const HomePage = () => {
 		<section className='shutterbug'>
 			<Main />
 			<Supporting />
-			{/* <Store /> */}
-			{/* <Footer /> */}
+			<Store />
+			<Footer />
 		</section>
 	);
 };
