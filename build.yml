@@ -4,7 +4,7 @@ services:
     build:
       context: ./services/react/
       dockerfile: Dockerfile
-    image: shutterbug-react
+    image: shutterbugg-react
     container_name: react
     restart: unless-stopped
     volumes:
@@ -19,8 +19,8 @@ services:
     build:
       context: ./services/react-nginx/
       dockerfile: Dockerfile
-    image: shutterbug-nginx
-    container_name: shutterbug-nginx
+    image: shutterbugg-nginx
+    container_name: shutterbugg-nginx
     restart: always
     volumes:
       - ./services/react/build/client/:/client
@@ -31,8 +31,8 @@ services:
     build:
       context: ./services/reverseproxy/
       dockerfile: Dockerfile
-    image: shutterbug-proxy
-    container_name: shutterbug-proxy
+    image: shutterbugg-proxy
+    container_name: shutterbugg-proxy
     restart: always
     ports:
       - 80:80 # react app
