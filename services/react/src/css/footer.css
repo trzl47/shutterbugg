@@ -1,0 +1,21 @@
+.footer {
+	border-top: 1px solid #dbdbdb;
+	background-color: #f3f3f3;
+	padding: 20px 0px 80px;
+}
+
+.footer h3 {
+	color: #555;
+	font: 400 1.2em 'Open Sans',arial,sans-serif;
+	margin-bottom: 10px;
+}
+
+.footer ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.footer li {
+	color: #999;
+	font-weight: 600;
+}
