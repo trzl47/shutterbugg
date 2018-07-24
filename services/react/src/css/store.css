@@ -1,0 +1,25 @@
+.stores {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	/* border-bottom: 0px; */
+	/* padding-bottom:100px */
+	height: 30vh;
+	padding: 0 10px;
+}
+
+.store-links {
+	display: grid;
+	grid-template-areas:
+		'app-store play-store';
+}
+
+.app-store {
+	grid-area: app-store;
+}
+
+.play-store {
+	grid-area: play-store;
+}
